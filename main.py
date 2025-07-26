@@ -16,4 +16,6 @@ def validate_password(password: str) -> bool:
         return False
     if not any(char in string.punctuation for char in password):
         return False
+    if len(password) > 20: # Add password can't more than 20 characters
+        return False
     return True
