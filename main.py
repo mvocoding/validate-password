@@ -16,4 +16,6 @@ def validate_password(password: str) -> bool:
         return False
     if not any(char in string.punctuation for char in password):
         return False
+    if not any(char.islower() for char in password): # must have at least one lowercase character
+        return False
     return True
