@@ -18,4 +18,6 @@ def validate_password(password: str) -> bool:
         return False
     if " " in password: # Must not have any space character in the password
         return False
+    if len(password) > 20: # Add password can't more than 20 characters
+        return False
     return True
