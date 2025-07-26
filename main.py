@@ -18,4 +18,6 @@ def validate_password(password: str) -> bool:
         return False
     if not any(char.islower() for char in password): # must have at least one lowercase character
         return False
+    if len(password) > 20: # Add password can't more than 20 characters
+        return False
     return True
