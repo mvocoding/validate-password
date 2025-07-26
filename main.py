@@ -16,4 +16,6 @@ def validate_password(password: str) -> bool:
         return False
     if not any(char in string.punctuation for char in password):
         return False
+    if " " in password: # Must not have any space character in the password
+        return False
     return True
